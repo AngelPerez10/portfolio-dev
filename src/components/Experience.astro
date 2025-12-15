@@ -1,0 +1,43 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "Ago 2025 – Dic 2025",
+    title: "Sistema de Gestión para Transportista (Full‑Stack)",
+    company: "ATR Servicios Logísticos",
+    description:
+      "Plataforma web integral para programación de viajes, facturación, nómina, taller y control de diésel. Sistema full‑stack con Frontend en React + TypeScript (TailwindCSS) y Backend en Django REST, con gestión de archivos en Cloudinary, automatización de procesos y seguridad basada en JWT.",
+  },
+  {
+    date: "Ene 2025 – Jun 2025",
+    title: "Sistema de firmas digitales, DigitalFlow",
+    company: "Grupo Integra Comunicaciones, S.A. de C.V.",
+    description:
+      "Plataforma web para gestión de órdenes de servicio y validación digital de documentación. Backend en Django con formularios y validaciones; almacenamiento de firmas y evidencia fotográfica en Cloudinary; despliegue en Render. Implementé captura de firma y carga de imágenes con control de tipos/tamaño, manejo seguro de archivos y trazabilidad del proceso; optimicé el flujo interno al digitalizar aprobaciones y reducir el uso de documentos físicos.",
+  },
+  {
+    date: "Ene 2024 – Nov 2024",
+    title: "Simulador de Serie de Fourier, Mathpou",
+    company: "Proyecto educativo",
+    description:
+      "Plataforma interactiva para reconstrucción de señales con serie de Fourier. Tecnologías: Python, NumPy, JavaScript y Django. Planificación ágil con Kanban/Scrum para entregas continuas y mejoras.",
+  },
+  {
+    date: "Ago 2023 – Nov 2023",
+    title: "Diseño de Aplicación Móvil, MiReceta",
+    company: "Proyecto personal",
+    description:
+      "UI para gestión de horarios de medicación, enfocada en usabilidad y recordatorios. La app ayudó a mejorar la adherencia al tratamiento al reducir olvidos de tomas.",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
