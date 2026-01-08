@@ -1,0 +1,83 @@
+cv:
+  name: "Adolfo Angel Perez Salado"
+  email: "angeelp7457@gmail.com"
+  website: "https://portfolio-dev-angel-perez.vercel.app/"
+  social_networks:
+    - network: "GitHub"
+      username: "AngelPerez10"
+  sections:
+    perfil:
+      - bullet: |
+          Ingeniero de Software con experiencia en desarrollo de sistemas web empresariales, especializado en Backend con Django REST y arquitecturas Full-Stack. Experiencia diseñando plataformas para automatización de procesos administrativos, facturación, nómina, control operativo y gestión documental, con autenticación JWT y despliegue en la nube.
+    habilidades:
+      - label: "Lenguajes"
+        details: "Python, JavaScript, TypeScript"
+      - label: "Backend"
+        details: "Django, Django REST Framework, APIs REST, Autenticación JWT"
+      - label: "Frontend"
+        details: "React, TailwindCSS, HTML5, CSS3"
+      - label: "Bases de Datos"
+        details: "PostgreSQL, MySQL, SQLite"
+      - label: "DevOps / Cloud"
+        details: "Render, Cloudinary, Git, GitHub"
+      - label: "Metodologías"
+        details: "Scrum, Kanban, Desarrollo Ágil"
+    experiencia:
+      - company: "Grupo Intrax GPS"
+        position: "Ingeniero de Software"
+        date: "Ene 2026 – Actualidad"
+        highlights:
+          - "Diseño y desarrollo de una plataforma web interna para centralizar y automatizar procesos administrativos, operativos y de mantenimiento."
+          - "Desarrollo de módulos para facturación, nómina, inventario, órdenes de servicio, control de herramientas y gastos operativos."
+          - "Generación de reportes en PDF, control de horas extra vinculadas a clientes y trazabilidad de información clave para toma de decisiones."
+      - company: "ATR Servicios Logísticos"
+        position: "Desarrollador Full-Stack"
+        date: "Ago 2025 – Dic 2025"
+        highlights:
+          - "Diseño y desarrollo de un sistema web integral para la gestión de transporte, incluyendo programación de viajes, facturación, nómina, taller y control de diésel."
+          - "Implementación de frontend en React + TypeScript con TailwindCSS y backend en Django REST Framework."
+          - "Definición de una arquitectura escalable con autenticación JWT y control de accesos por usuario."
+          - "Automatización de flujos operativos y gestión de archivos con Cloudinary, mejorando la trazabilidad documental y reduciendo procesos manuales."
+      - company: "Grupo Integra Comunicaciones"
+        position: "Desarrollador Backend"
+        date: "Ene 2025 – Jun 2025"
+        highlights:
+          - "Desarrollo de una plataforma web para la gestión de órdenes de servicio y validación digital de documentación."
+          - "Implementación de captura de firmas digitales y carga de evidencia fotográfica con validación de tipo y tamaño de archivos."
+          - "Almacenamiento seguro de archivos en Cloudinary y control de trazabilidad del proceso."
+          - "Despliegue de la plataforma en Render, asegurando estabilidad, seguridad y disponibilidad del sistema."
+    educacion:
+      - institution: "Universidad de Colima"
+        area: "Ingeniería de Software"
+        date: "Ago 2021 – Ago 2025"
+        location: "Colima, México"
+    proyectos:
+      - name: "MathPou"
+        date: "Ene 2024 – Nov 2024"
+        summary: "Plataforma educativa para la reconstrucción de señales mediante series de Fourier."
+        highlights:
+          - "Implementación de modelos matemáticos en Python y NumPy."
+          - "Integración con Django y visualización interactiva en JavaScript."
+  sort_entries: "none"
+design:
+  theme: "engineeringresumes"
+  page:
+    size: "us-letter"
+    top_margin: "1.5cm"
+    bottom_margin: "1.5cm"
+    left_margin: "1.5cm"
+    right_margin: "1.5cm"
+    show_page_numbering: false
+    show_last_updated_date: false
+locale:
+  language: "es"
+  present: "Actualidad"
+rendercv_settings:
+  date: "2026-01-06"
+  bold_keywords:
+    - "Django"
+    - "Django REST Framework"
+    - "APIs REST"
+    - "JWT"
+    - "PostgreSQL"
+  sort_entries: "none"

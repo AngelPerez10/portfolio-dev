@@ -6,10 +6,11 @@ import Briefcase from "@/components/icons/Briefcase.astro"
 import CodeIcon from "@/components/icons/Code.astro"
 import Experience from "@/components/Experience.astro"
 import ProfileCheck from "@/components/icons/ProfileCheck.astro"
-import Projects from "@/components/Projects.astro"
+// import Projects from "@/components/Projects.astro"
 import SectionContainer from "@/components/SectionContainer.astro"
 import Hero from "@/components/Hero.astro"
 import TitleSection from "@/components/TitleSection.astro"
+import Stack from "@/components/Stack.astro"
 ---
 
 <Layout
@@ -31,12 +32,22 @@ import TitleSection from "@/components/TitleSection.astro"
       <Experience />
     </SectionContainer>
 
+    <!--
     <SectionContainer id="proyectos">
       <TitleSection>
         <CodeIcon class="size-7" />
         Proyectos
       </TitleSection>
       <Projects />
+    </SectionContainer>
+    -->
+
+    <SectionContainer id="stack">
+      <TitleSection>
+        <CodeIcon class="size-7" />
+        Stack
+      </TitleSection>
+      <Stack />
     </SectionContainer>
 
     <SectionContainer id="sobre-mi">

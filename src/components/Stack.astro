@@ -1,0 +1,93 @@
+---
+import htmlLogo from "@/icons/html5.svg"
+import cssLogo from "@/icons/css.svg"
+import javascriptLogo from "@/icons/javascript.svg"
+import typescriptLogo from "@/icons/typescript.svg"
+import pythonLogo from "@/icons/python-icon.svg"
+import tailwindLogo from "@/icons/tailwindcss.svg"
+import reactLogo from "@/icons/react.svg"
+import djangoLogo from "@/icons/django-icon-svgrepo-com.svg"
+import mysqlLogo from "@/icons/mysql-svgrepo.svg"
+import postgresLogo from "@/icons/pgsql-svgrepo-com.svg"
+import sqliteLogo from "@/icons/sqlite-svgrepo-com.svg"
+import cloudinaryLogo from "@/icons/cloudinary-svgrepo-com.svg"
+import nextLogo from "@/icons/nextjs.svg"
+import astroLogo from "@/icons/astro.svg"
+import nodeLogo from "@/icons/nodejs.svg"
+import gitLogo from "@/icons/git.svg"
+import linuxLogo from "@/icons/linux.png"
+import vscodeLogo from "@/icons/vscode.svg"
+import figmaLogo from "@/icons/figma.svg"
+
+const STACK = [
+  { name: "Python", color: "#3776AB", icon: pythonLogo },
+  { name: "HTML", color: "#EF652A", icon: htmlLogo },
+  { name: "CSS", color: "#30A9DC", icon: cssLogo },
+  { name: "JavaScript", color: "#F0DB4F", icon: javascriptLogo },
+  { name: "TypeScript", color: "#3178C6", icon: typescriptLogo },
+  { name: "Django", color: "#0C4B33", icon: djangoLogo },
+  { name: "MySQL", color: "#00758F", icon: mysqlLogo },
+  { name: "PostgreSQL", color: "#336791", icon: postgresLogo },
+  { name: "SQLite", color: "#0F80CC", icon: sqliteLogo },
+  { name: "Tailwind", color: "#17BAB8", icon: tailwindLogo },
+  { name: "React", color: "#00D8FF", icon: reactLogo },
+  { name: "Next", color: "#FAFAFA", icon: nextLogo },
+  { name: "Astro", color: "#FAFAFA", icon: astroLogo },
+  { name: "NodeJS", color: "#539E43", icon: nodeLogo },
+  { name: "Cloudinary", color: "#3448C5", icon: cloudinaryLogo },
+  { name: "Git", color: "#DE4C36", icon: gitLogo },
+  { name: "Linux", color: "#DFAF22", icon: linuxLogo },
+  { name: "VS Code", color: "#3DA9F2", icon: vscodeLogo },
+  { name: "Figma", color: "#A95FFF", icon: figmaLogo },
+]
+---
+
+<div class="flex flex-wrap gap-3">
+  {
+    STACK.map((item) => {
+      const isLight = item.color === "#FAFAFA"
+      const needsDarkInvert = item.name === "MySQL" || item.name === "SQLite"
+
+      const chipStyle = isLight
+        ? {}
+        : {
+            backgroundColor: `${item.color}20`,
+            color: item.color,
+          }
+
+      const glowBg = isLight
+        ? "radial-gradient(circle at 30% 30%, rgba(255,255,255,0.45), rgba(255,255,255,0) 62%)"
+        : `radial-gradient(circle at 30% 30%, ${item.color}85, rgba(0,0,0,0) 62%)`
+
+      const glowColor = isLight ? "rgba(255,255,255,0.35)" : item.color
+
+      return (
+        <span
+          class={`group relative inline-flex items-center gap-2 overflow-visible rounded-full px-4 py-2 text-sm ring-1 ring-black/10 dark:ring-white/15 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:ring-black/20 dark:hover:ring-white/25 hover:shadow-xl hover:[box-shadow:0_0_30px_var(--glow)] ${
+            isLight ? "bg-black/5 text-black/80 dark:bg-white/10 dark:text-white/80" : ""
+          }`}
+          style={{ ...chipStyle, "--glow": glowColor }}
+        >
+          <span class="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md bg-black/90 px-2 py-1 text-xs text-white opacity-0 shadow-lg ring-1 ring-black/20 transition-opacity duration-150 group-hover:opacity-100 dark:bg-white/10 dark:text-white dark:ring-white/15">
+            {item.name}
+          </span>
+          <span
+            class="pointer-events-none absolute inset-0 opacity-0 blur-2xl transition-opacity duration-200 group-hover:opacity-100"
+            style={{ background: glowBg }}
+          />
+          {item.icon && (
+            <img
+              src={item.icon.src}
+              alt={item.name}
+              class={`size-4 transition-transform duration-200 group-hover:scale-110 ${
+                needsDarkInvert ? "dark:invert dark:brightness-200" : ""
+              }`}
+              loading="lazy"
+            />
+          )}
+          <span class="relative">{item.name}</span>
+        </span>
+      )
+    })
+  }
+</div>
